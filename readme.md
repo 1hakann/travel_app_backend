@@ -8,3 +8,12 @@
 
 ### 4- adding start scripts in package.json 
 
+### 5- adding gitignore
+
+### 6- setup node-snippets extension
+
+### 7- write server js de "node-express snippet" 
+
+### 8- create .env then adding port
+
+### 9- const dotenv = require('dotenv') AND dotenv.config() AND process.env.PORT THEN npm start
