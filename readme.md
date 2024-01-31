@@ -17,3 +17,7 @@
 ### 8- create .env then adding port
 
 ### 9- const dotenv = require('dotenv') AND dotenv.config() AND process.env.PORT THEN npm start
+
+### 10- mongodb atlas setup cloud project
+
+### 11- adding mongoose to serverjs
