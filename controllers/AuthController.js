@@ -16,8 +16,8 @@ module.exports = {
             await newUser.save();
 
             res.status(201).json({status: true, message: "User successfully created"})
-        } catch(error) {
-
+        } catch(err) {
+            return next(err)
         }
     }
 }
