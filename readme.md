@@ -21,3 +21,7 @@
 ### 10- mongodb atlas setup cloud project
 
 ### 11- adding mongoose to serverjs
+
+### 12- creating user model
+
+### 13- creating user func (npm i jsonwebtoken crypto-js)
