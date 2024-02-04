@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const errorHandler = require('./middleware/ErrorHandling')
 const authRouter = require("./routes/auth");
 const userRouter = require("./routes/user");
+const countryRouter = require("./routes/country");
 const port = 3000
 
 dotenv.config()
@@ -19,6 +20,7 @@ app.use(errorHandler);
 // localhost:5003/api/register
 app.use('/api', authRouter);
 app.use('/api/users', userRouter)
+app.use('/api/countries', countryRouter)
 
 app.get('/', (req, res) => res.send('Hello World!'))
 app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${process.env.PORT}!`))
