@@ -17,6 +17,7 @@ const PlaceSchema = new mongoose.Schema({
             ref: "Hotel"
         }
     ]
+
 }, {timestamps: true});
 
-module.exports = mongoose.model("Place", PlaceSchema)
+module.exports = mongoose.model("Place", PlaceSchema);
