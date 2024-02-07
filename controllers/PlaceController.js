@@ -38,7 +38,11 @@ module.exports = {
         const placeId = req.params.id;
 
         try {
-            const place = await Place.findById(placeId, { createdAt: 0, updatedAt: 0, __v: 0 });
+            const place = await Place.findById(placeId, { createdAt: 0, updatedAt: 0, __v: 0 })
+            .populate({
+                path: 'popular',
+                select: 'title rating review imageUrl location'
+            });
             res.status(200).json({ place });
         } catch (err) {
             return next(err)
