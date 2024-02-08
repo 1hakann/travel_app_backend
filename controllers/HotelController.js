@@ -61,7 +61,17 @@ module.exports = {
         const hotelId = req.params.id;
 
         try {
-            const hotel = await Hotel.findById(hotelId);
+            const hotel = await Hotel.findById(hotelId)
+            .populate({
+                path: 'reviews',
+                options: { sort: {updatedAt: -1}, limit: 2 },
+                select: 'rating review updatedAt user',
+                populate: {
+                    path: 'user',
+                    model: 'User',
+                    select: 'username profile'
+                }
+            });
 
             if(!hotel) {
                 res.status(404).json({status: false, message: "Hotel not found"});

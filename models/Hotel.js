@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const moongose = require("mongoose");
 
 const HotelSchema = new moongose.Schema({
@@ -18,6 +19,10 @@ const HotelSchema = new moongose.Schema({
         longitude: { type: Number, required: true },
     },
     price:{type: Number, required: true},
+    reviews: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Review"
+    },
     facilities: [
         {
             wifi: {type: Boolean, default: true}
