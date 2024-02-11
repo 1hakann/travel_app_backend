@@ -28,7 +28,7 @@ module.exports = {
     getPlaces: async (req, res, next) => {
         try {
             const limitParams = req.query.limit;
-            const query = Place.find({}, '_id review rating imageUrl title country_id location');
+            let query =  Place.find({}, '_id review rating imageUrl title country_id location');
 
             if(limitParams !== 'all') {
                 const limit = parseInt(limitParams) || 5;
