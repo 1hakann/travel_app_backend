@@ -1,27 +1,50 @@
-# Guide
+# Travel App API
 
-### 1- npm init -y
+Bu proje, React Native ile geliştirilmiş "Travel App" adlı bir mobil uygulamasının backend tarafını oluşturan Node.js tabanlı bir API'yi içerir.
 
-### 2- npm install express nodemon mongoose dotenv 
+## İçindekiler
 
-### 3- adding server.js and controllers, middleware, models, routes folders
+- [Kurulum](#kurulum)
+- [Kullanım](#kullanım)
+- [API Dokümantasyonu](#api-dokümantasyonu)
+- [Authentication](#authentication)
+- [Teknolojiler](#teknolojiler)
+- [Geliştirici Notları](#geliştirici-notları)
 
-### 4- adding start scripts in package.json 
+## Kurulum
 
-### 5- adding gitignore
+Projenin yerel bir ortamda çalıştırılabilmesi için aşağıdaki adımları izleyin:
 
-### 6- setup node-snippets extension
+1. Node.js ve npm'i [buradan](https://nodejs.org/) indirin ve yükleyin.
+2. Proje dizinine gidin:
+   ```bash
+   cd travel-app-api
+   npm install
+   cp .env.example .env
+   npm start
 
-### 7- write server js de "node-express snippet" 
+API, http://localhost:5003 üzerinde çalışacaktır.
 
-### 8- create .env then adding port
+## Kullanım
 
-### 9- const dotenv = require('dotenv') AND dotenv.config() AND process.env.PORT THEN npm start
+API'yi kullanmaya başlamak için Postman veya benzeri bir araç kullanarak API endpoint'lerini test edebilirsiniz. Ayrıca, React Native Travel App'inizle bu API'yi entegre edebilirsiniz.
 
-### 10- mongodb atlas setup cloud project
+## API Dokümantasyonu
 
-### 11- adding mongoose to serverjs
+..Yazılacak
 
-### 12- creating user model
+## Teknolojiler
 
-### 13- creating user func (npm i jsonwebtoken crypto-js)
+Node.js
+Express.js
+MongoDB
+JWT Authentication
+
+## Geliştirici Notları
+
+- Geliştirme ortamında npm start komutunu kullanarak nodemon ile otomatik canlı yenileme özelliğinden yararlanabilirsiniz.
+- Proje üzerindeki değişiklikleri takip etmek için GitHub Issues sayfasını kullanın.
+
+Dikkat: Bu proje sadece örnek amaçlıdır ve gerçek bir proje değildir.
+
+© 2024 Travel App Api
