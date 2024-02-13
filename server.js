@@ -9,16 +9,19 @@ const countryRouter = require("./routes/country");
 const placeRouter = require("./routes/place");
 const hotelRouter = require("./routes/hotel");
 const reviewRouter = require("./routes/review");
-const port = 5003;
+const port = process.env.PORT || 5003;
 
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("database connected"))
-    .catch((err) => console.log(err))
+    .catch((err) => {
+        console.error("Database connection error:", err);
+        process.exit(1);
+    })
 
+app.use(errorHandler);
 app.use(express.json({limit: "10mb"}));
 app.use(express.urlencoded({limit: "10mb", extended: true}));
-app.use(errorHandler);
 
 // localhost:5003/api/register
 app.use('/api/', authRouter);
